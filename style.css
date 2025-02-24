@@ -1,11 +1,12 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
+    --color-primary: hsl(7, 100%, 51%);
+    --color-secondary: #f16220;
+    --color-tertiary: #c4c4c4;
+    --color-button: #da3b01;
     --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-text: #ffffff;
+    --color-background: #121212;
+    --color-border: rgba(255, 255, 255, 0.2);
 }
 
 /* Estilos generales */
@@ -13,16 +14,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+h2 {
+    color: var(--color-text);
 }
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-background);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Contenedor principal */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -36,89 +43,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding-top: 40px;
 }
 
 /* Sección de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 32px 32px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 24px;
     width: 100%;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-size: 42px;
     font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+    color: var(--color-text);
     text-align: center;
 }
 
-/* Contenedores de entrada y botón */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFF;
+    margin: 12px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada */
 .input-wrapper {
     display: flex;
-    justify-content: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin-top: 20px;
+    border: 2px solid var(--color-border);
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-.button-container {
-    width: 300px;
-    justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
     flex: 1;
-    padding: 10px 15px;
+    padding: 12px;
     font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    color: var(--color-text);
 }
 
 /* Estilos de botón */
 button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    padding: 12px 24px;
     font-size: 16px;
-    border: 2px solid #000;
+    border: none;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    color: var(--color-background);
 }
 
 .button-add:hover {
@@ -129,34 +120,42 @@ button {
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    padding: 0;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
+    padding: 10px;
+    border-radius: 12px;
 }
 
-/* Botón de sortear título */
+/* Botón de sortear */
 .button-draw {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
+    padding: 12px 40px;
+    color: var(--color-text);
     background-color: var(--color-button);
     font-size: 16px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 16px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+    transform: scale(1.05);
 }
