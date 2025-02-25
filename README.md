@@ -1,3 +1,5 @@
+![Captura de pantalla 2025-02-24 201537](https://github.com/user-attachments/assets/c3ae1d64-a73f-4b7d-9748-76d9b5548258)
+
 
 # Amigo_secreto_alura
 Proyecto Challenge Amigo secreto - Alura Latam
